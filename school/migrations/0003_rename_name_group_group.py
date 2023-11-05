@@ -4,15 +4,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('school', '0002_alter_group_curator'),
+        ("school", "0002_alter_group_curator"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='group',
-            old_name='name',
-            new_name='group',
+            model_name="group",
+            old_name="name",
+            new_name="group",
         ),
     ]

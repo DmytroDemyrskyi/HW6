@@ -32,12 +32,11 @@ def group_form(request):
 
     form = GroupForm(request.POST)
     if form.is_valid():
-        group = form.cleaned_data['group']
-        curator = form.cleaned_data['curator']
+        group = form.cleaned_data["group"]
+        curator = form.cleaned_data["curator"]
 
         group, created = Group.objects.get_or_create(
-            group=group,
-            defaults={'curator': curator}
+            group=group, defaults={"curator": curator}
         )
 
         if not created:
